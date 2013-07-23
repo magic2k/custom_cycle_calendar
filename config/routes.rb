@@ -1,5 +1,7 @@
 CustomCycleCalendar::Application.routes.draw do
-  resource :bicycles
-  root to: 'bicycles#index'
+  resources :bicycles
+  resources :rents
+  root to: 'application#index'
+
 
 end

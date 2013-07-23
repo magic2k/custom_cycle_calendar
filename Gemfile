@@ -8,9 +8,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'therubyracer', platforms: :ruby
+gem 'therubyracer'
 gem 'bootstrap-sass'
-gem 'jquery-ui-rails'
+gem 'bootstrap-datepicker-rails'
+gem 'paperclip', '~> 3.5.0'
+#gem 'jquery-ui-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

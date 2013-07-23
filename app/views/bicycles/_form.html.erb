@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="span6 offset3">
+
+    <%= form_for @bicycle do |f| %>
+
+        <%= render 'shared/error_messages', object: @bicycle %>
+
+        <%= f.label "Название велосипеда" %>
+        <%= f.text_field :name %>
+
+        <%= f.submit "Добавить новый велосипед",class: 'btn btn-large btn-primary' %>
+
+    <% end %>
+  </div>
+</div>

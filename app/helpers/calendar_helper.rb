@@ -1,4 +1,5 @@
 module CalendarHelper
+  #def calendar(date = Date.today.format("%y-%m-%d"), &block)
   def calendar(date = Date.today, &block)
     Calendar.new(self, date, block).table
   end

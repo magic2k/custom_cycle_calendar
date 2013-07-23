@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Календарь аренды", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Календарь", root_path %></li>
+          <li><%= link_to "Наши велосипеды", bicycles_path %></li>
+          <li><%= link_to "Аренда велосипеда", new_rent_path %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

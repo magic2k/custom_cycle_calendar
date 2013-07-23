@@ -1,0 +1,20 @@
+<h1><%= @bicycle.name %></h1>
+<!--Photo-->
+<div class="row">
+<div class="span6 offset8">
+<section>
+  <h2>Записи аренды</h2>
+</section>
+<div class="microposts">
+  <ul>
+  <% @rents.each do |rent| %>
+      <li><%= "Запись на " + rent.date.strftime("%d.%m.%y") + " для " + \
+       rent.renter_name + " зарегистрировано в " + \
+       rent.created_at.strftime("%H:%M %d.%m.%y") %>
+  <% end %>
+  </ul>
+
+</div>
+</div>
+</div>
+<%= link_to('Записаться на аренду велосипеда', new_rent_path) %>
