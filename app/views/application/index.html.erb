@@ -15,6 +15,7 @@
           <%= puts 'YYYYYYYYYYEEEEEEEEEEEEEEEEEEEEEHHHHHHHHHHH!' %>
         <ul>
           <% @rents_by_date[date].each do |rent| %>
+
             <li><%= link_to rent.bicycle.name, rent.bicycle %></li>
           <% end %>
         </ul>

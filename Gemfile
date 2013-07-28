@@ -12,6 +12,8 @@ gem 'therubyracer'
 gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
 gem 'paperclip', '~> 3.5.0'
+#upgrade later to bcrypt > 3.1
+gem 'bcrypt-ruby', '3.0'
 #gem 'jquery-ui-rails'
 
 group :doc do

@@ -2,11 +2,19 @@
 
 <!--rewrite with partials like "render partial: "bicycles", collection: @bicycle-->
 <div class="row">
-  <div class="span6 offset8">
+  <div class="span6 offset2">
     <div class="users">
       <ul>
         <% @bicycles.each do |bicycle| %>
-            <li> <%= link_to(bicycle.name, bicycle) %> </li>
+            <li>
+              <%= link_to((image_tag bicycle.bicycle_photo(:thumb)), bicycle) %>
+              <%= link_to(bicycle.name, bicycle) %>
+              <% if current_user && current_user.admin? %>
+                  <%= link_to("Изменить", edit_bicycle_path(bicycle)) %>
+                  <%= link_to("Удалить", bicycle,
+                              method: :delete, confirm: "Точно удалить?") %>
+                  </li>
+              <% end %>
         <% end %>
       </ul>
     </div>

@@ -11,10 +11,10 @@
         <%= label_tag 'Дата проката' %>
         <%= f.text_field :date %>
 
-        <%= f.label 'велик :)' %>
+        <%= f.label 'Choose your велосипед' %>
         <%= f.collection_select :bicycle_id, Bicycle.all, :id, :name %>
 
-        <%= f.submit "Записаться", class: "btn large-btn btn-primary" %>
+        <%= f.submit "Zаписаться", class: "btn large-btn btn-primary" %>
     <% end %>
   </div>
 </div>
