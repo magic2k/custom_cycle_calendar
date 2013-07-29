@@ -2,16 +2,21 @@
 <h1><%= image_tag @bicycle.bicycle_photo %></h1>
 <!--Photo-->
 <div class="row">
-<div class="span6 offset8">
+<div class="span6 offset4">
 <section>
   <h2>Записи аренды</h2>
 </section>
 <div class="microposts">
   <ul>
   <% @rents.each do |rent| %>
-      <li><%= "Запись на " + rent.date.strftime("%d.%m.%y") + " для " + \
-       rent.renter_name + " зарегистрировано в " + \
-       rent.created_at.strftime("%H:%M %d.%m.%y") %>
+      <li>
+        <%= "Запись на " + rent.date.strftime("%d.%m.%y") + " для " + \
+        rent.renter_name + " зарегистрировано в " + \
+        rent.created_at.strftime("%H:%M %d.%m.%y") %>
+        <% if current_user && current_user.admin? %>
+            <%= link_to "удалить", rent, method: :delete, confirm: "Точно удалить?" %>
+        <% end %>
+      </li>
   <% end %>
   </ul>
 

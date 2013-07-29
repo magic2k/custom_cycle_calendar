@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20130725145422) do
 
   create_table "bicycles", force: true do |t|
     t.string   "name"
-    t.binary   "avatar"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "bicycle_photo_file_name"

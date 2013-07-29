@@ -5,7 +5,7 @@
 
         <%= render 'shared/error_messages', object: @rent %>
 
-        <%= f.label 'Имя (кто берет в прокат)' %>
+        <%= f.label 'Имя и Фамилия (кто берет в прокат)' %>
         <%= f.text_field :renter_name%>
 
         <%= label_tag 'Дата проката' %>
@@ -14,7 +14,7 @@
         <%= f.label 'Choose your велосипед' %>
         <%= f.collection_select :bicycle_id, Bicycle.all, :id, :name %>
 
-        <%= f.submit "Zаписаться", class: "btn large-btn btn-primary" %>
+        <%= f.submit "Записаться", class: "btn large-btn btn-primary" %>
     <% end %>
   </div>
 </div>

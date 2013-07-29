@@ -12,11 +12,10 @@
 
         <%= date.day %>
       <% if @rents_by_date[date] %>
-          <%= puts 'YYYYYYYYYYEEEEEEEEEEEEEEEEEEEEEHHHHHHHHHHH!' %>
         <ul>
           <% @rents_by_date[date].each do |rent| %>
 
-            <li><%= link_to rent.bicycle.name, rent.bicycle %></li>
+            <li><%= link_to rent.bicycle.name + ' (' + rent.renter_name + ')', rent.bicycle %></li>
           <% end %>
         </ul>
       <% end %>

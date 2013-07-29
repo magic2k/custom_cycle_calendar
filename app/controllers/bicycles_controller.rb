@@ -1,7 +1,7 @@
 class BicyclesController < ApplicationController
 
   before_filter :current_user
-  before_filter :admin_user, only: [:new, :destroy]
+  before_filter :admin_user, only: [:new, :edit, :destroy]
 
   def index
     @bicycles = Bicycle.order('name ASC').all
