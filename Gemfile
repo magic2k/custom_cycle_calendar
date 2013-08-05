@@ -15,6 +15,7 @@ gem 'paperclip', '~> 3.5.0'
 #upgrade later to bcrypt > 3.1
 gem 'bcrypt-ruby', '3.0'
 #gem 'jquery-ui-rails'
+#gem 'unicorn'
 
 group :development do
   gem 'sqlite3'
