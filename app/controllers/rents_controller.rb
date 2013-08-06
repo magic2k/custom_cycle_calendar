@@ -12,6 +12,8 @@ class RentsController < ApplicationController
 
       redirect_to root_path,
                     notice: "Велосипед записан за вами на " + @rent.date.strftime("%y.%m.%d")
+    else
+      redirect_to new_rent_path, notice: "Не все поля заполнены."		
     end
   end
 
